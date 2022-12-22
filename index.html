@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top page</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header header__inner">
+        <img class="header__img" src="./images/支出記録帳-1.jpg" alt="">
+    </header>
+    <main class="main">
+        <div class="main__inner">
+            <a class="sentaku" href="./input.html">入力する</a><br>
+
+            <!-- <a class="sentaku" href="./deleat.html">消す</a><br> -->
+
+            <div class="dropdown">
+                <input id="tg" class="dropInput" type="checkbox">
+                <label for="tg" class="dropLabel">確認する ▼</label>
+                <ul class="menu animation">
+                    <li><a class="item" href="./output zenbu.html">全部</a></li>
+                    <li><a class="item" href="./output.html">食費</a></li>
+                    <li><a class="item" href="./output kounetu.html">光熱費</a></li>
+                    <li><a class="item" href="./output syumi.html">趣味</a></li>
+                    <li><a class="item" href="./output sonota.html">その他</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+</body>
+
+</html>

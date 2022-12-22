@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>out page[食費]</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header header__inner">
+        <a href="./index.html"><img class="header__pic" src="./images/戻るボタン.jpg" alt=""></a>
+
+
+
+    </header>
+
+    <main class="main">
+        <div class="main__inner">
+            <details>
+                <summary>
+                    <strong>
+                        <img class="header__img" src="./images/食費.jpg" alt="">
+                    </strong>
+                </summary>
+                <ul>
+                    <li><a href="./output zenbu.html" class="menu__list"> 全部</a></li>
+                    <li><a href="./output kounetu.html" class="menu__list"> 光熱費</a></li>
+                    <li><a href="./output syumi.html" class="menu__list"> 趣味</a></li>
+                    <li><a href="./output sonota.html" class="menu__list"> その他</a></li>
+
+                </ul>
+            </details>
+
+
+            <div id="date"></div>
+            <script>
+
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                };
+
+
+                fetch("https://sheets.googleapis.com/v4/spreadsheets/10phLI6g008TvzOA6ffC106kNoY9WG9mppd1mvgZxf7o/values/支出?key=AIzaSyAb_svZAx2M8uHzTZgF0k4rrXQVxmWzFR0", requestOptions)
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result.values);
+                        for (let i = 0; i < result.values.length; i++) {
+                            let ulElm = document.createElement('ul');
+
+                            for (let j = 6; j < result.values[i].length; j++) {
+                                if (result.values[i][7] == "食費") {
+
+                                    console.log(result.values[i][j]);
+                                    let liElm = document.createElement('li');
+                                    liElm.innerText = result.values[i][j];
+                                    ulElm.appendChild(liElm);
+
+                                    ulElm.classList.add("date");
+
+
+                                    document.body.appendChild(ulElm);
+                                } else {
+
+                                }
+                            }
+                        }
+
+
+                        console.log("yes")
+                    })
+                    .catch(error => console.log('error', error));
+
+
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>

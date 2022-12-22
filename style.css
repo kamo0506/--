@@ -1,0 +1,162 @@
+@charset "UTF-8";
+.inner {
+  max-width: 1200px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+.header__inner {
+  max-width: 1200px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__img {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.header__pic {
+  width: 95px;
+  margin-left: auto;
+}
+
+.main__inner {
+  max-width: 1200px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sentaku {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: #707070;
+  font-size: 25px;
+  padding-top: 120px;
+}
+
+.dropdown {
+  display: inline-block;
+  padding-top: 80px;
+}
+
+#tg {
+  display: none;
+}
+
+.menu {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  top: -10px;
+  list-style: none;
+}
+
+.dropInput:checked ~ .menu {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+  padding-left: 0;
+}
+
+.dropLabel,
+.item {
+  font-size: 25px;
+  padding: 1.5em;
+  display: block;
+  position: relative;
+  color: #707070;
+  text-decoration: none;
+  padding-bottom: 0px;
+}
+
+.item {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
+
+.item:hover {
+  background-color: #FDEBFD;
+  color: #707070;
+}
+
+.animation {
+  transition: all 0.3s;
+}
+
+.unit__text {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 50px;
+  font-family: A-OTF すずむし Std;
+  color: #707070;
+}
+.unit__box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  display: block;
+}
+
+.submit {
+  color: #707070;
+  font-family: A-OTF すずむし Std;
+  margin: 0 auto;
+  width: 300px;
+  height: 65px;
+  margin-top: 150px;
+  border-radius: 45px;
+  margin-bottom: 135px;
+  display: block;
+}
+
+.date {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+strong {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+summary {
+  color: white;
+}
+
+.menu__list {
+  font-size: 25px;
+  color: #707070;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+}
+
+.maru {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

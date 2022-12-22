@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input page</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class=" header__inner">
+            <a href="./index.html"><img class="header__pic" src="./images/戻るボタン.jpg" alt=""></a>
+
+            <img class="header__img" src="./images/入力画面.jpg" alt="">
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__inner">
+            <form method="POST"
+                action="https://script.google.com/macros/s/AKfycbyQTMxGMlH8v8wSvOqP43cGfseQo7cFVpS-gm7flgZe4QezjUr5cCV8wOuK5do11rgp/exec">
+
+                <div class="unit__date">
+                    <p class="unit__text">日付</p>
+                    <div class="unit__box">
+                        <input name="post_param1" type="date">
+                    </div>
+                </div>
+                <div class="unit__jan">
+                    <p class="unit__text">ジャンル</p>
+                    <input class="unit__box" name="post_param2" type="text" list="janru" placeholder="入力もしくはクリック"
+                        autocomplete="off">
+                    <datalist id="janru">
+                        <option value="食費">
+                        </option>
+                        <option value="光熱費">
+                        </option>
+                        <option value="趣味">
+                        </option>
+                        <option value="その他">
+                        </option>
+                    </datalist>
+                </div>
+                <div class="unit__kin">
+                    <p class="unit__text">金額</p>
+                    <input class="unit__box" name="post_param3" type="text" placeholder="入力">
+                </div>
+                <br>
+                <button class="submit" type="submit">決定</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
+</body>
+
+</html>
